@@ -2,6 +2,8 @@ Real-Time Data Pipeline: AWS S3 → Lambda → Airflow → Snowflake
 
 This project showcases a real-time data ingestion pipeline that I built from scratch to explore how cloud-native services can work together to move and transform data seamlessly. From generating data to seeing it land in Snowflake. Everything here is automated, monitored, and orchestrated using some of the most widely used tools in the data world.
 
+Note: Please refer to the screenshots for step-by-step visuals of the setup and execution.
+
 Use Case: 
 This pipeline simulates real-time user activity data (such as user ID, name, and email), which is uploaded to an S3 bucket, triggers Lambda, calls a webhook to Apache Airflow, and finally loads the data into Snowflake.
 
@@ -43,7 +45,7 @@ Step-by-Step Workflow:
 
 Step 1: Generate Synthetic JSON Data using Python
 A Python script (generate_data.py) creates simple user records like
-
+{ "id": "101", "name": "Alice", "email": "alice@example.com" }
 These files are uploaded to a pre-configured AWS S3 bucket.
 
 Step 2:  AWS S3 Triggers Lambda on File Upload
@@ -87,5 +89,3 @@ Please feel free to connect or reach out to me on LinkedIn at https://www.linked
 
 
 
-# aws-airflow-snowflake-pipeline
-End-to-end real-time data pipeline using AWS S3, Lambda, CloudWatch, Airflow(Docker), and Snowflake
